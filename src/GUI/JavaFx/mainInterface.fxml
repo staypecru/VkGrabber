@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="GUI.JavaFx.Controller">
+  <children>
+    <TextField fx:id="inputTextField" layoutX="14.0" layoutY="50.0" prefWidth="200.0" />
+    <Button fx:id="findUsersButton" layoutX="265.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickFindUsersButton" text="Find Users" />
+    <ListView fx:id="usersListView" layoutX="14.0" layoutY="113.0" prefHeight="139.0" prefWidth="346.0" />
+    <ProgressIndicator fx:id="usersProgressIndicator" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" disable="false" focusTraversable="false" layoutX="175.0" layoutY="161.0" prefHeight="78.0" prefWidth="78.0" progress="-1.0" visible="false" />
+    <Button fx:id="saveButton" layoutX="265.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickSaveButton" prefWidth="95.0" text="Save" />
+    <ListView fx:id="blockListView" blendMode="SRC_OVER" layoutX="426.0" layoutY="113.0" prefHeight="139.0" prefWidth="200.0" />
+    <Button fx:id="downloadButton" layoutX="426.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickDownloadButton" prefWidth="95.0" text="Download" />
+    <Text layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" />
+    <Text layoutX="426.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blocks" />
+    <Button fx:id="deleteButton" layoutX="531.0" layoutY="341.0" mnemonicParsing="false" onAction="#onClickDeleteButton" prefWidth="95.0" text="Delete" />
+    <Button fx:id="renameButton" layoutX="676.0" layoutY="113.0" mnemonicParsing="false" onAction="#onClickRenameButton" text="Rename" />
+    <MenuButton fx:id="exportButton" layoutX="18.0" layoutY="341.0" mnemonicParsing="false" text="Export">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#onClickExportIdsButton" text="Export Ids" fx:id="exportIdsButton" />
+        <MenuItem mnemonicParsing="false" onAction="#onClickExportUsersButton" text="Export Users" fx:id="exportUsersButton" />
+      </items>
+    </MenuButton>
+  </children>
+</AnchorPane>
